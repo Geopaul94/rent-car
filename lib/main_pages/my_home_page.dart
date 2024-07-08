@@ -3,6 +3,18 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:rent_car/main.dart';
 
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => MyHomePageState();
+}
+
 class MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   FirebaseFirestore db = FirebaseFirestore.instance;
