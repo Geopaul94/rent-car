@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:rent_car/main_pages/my_home_page.dart';
+import 'package:rent_car/presentation/pages/car_details_page.dart';
+import 'package:rent_car/presentation/pages/car_list.dart';
+
+import 'package:rent_car/presentation/pages/onbording_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -17,12 +20,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Rent Car',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: CarDetailsPage(),
     );
   }
 }
+
